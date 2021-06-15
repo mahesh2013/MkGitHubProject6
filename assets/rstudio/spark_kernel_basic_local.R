@@ -8,11 +8,10 @@
 #    - disconnect from Spark kernel
 #
 ############################################################################
-Sys.sleep(1)
 
 # load spark R packages
 library(sparklyr)
-
+Sys.sleep(1)
 
 # connect to Spark kernel
 sc <- spark_connect(master = 'local')
