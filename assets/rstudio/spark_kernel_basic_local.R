@@ -13,7 +13,7 @@
 library(sparklyr)
 
 # connect to Spark kernel
-sc <- spark_connect(master = 'local')
+sc <- spark_connect(master = 'local', config = spark_config())
 
 # create local R data frame
 library(dplyr)
