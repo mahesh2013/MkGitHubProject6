@@ -12,6 +12,12 @@
 # load spark R packages
 library(sparklyr)
 
+for (i in 1:1000) {
+  print("Wait..")
+  print(i)
+  Sys.sleep(1)
+}
+
 conf <- spark_config()
 conf$method = 'local'
 
