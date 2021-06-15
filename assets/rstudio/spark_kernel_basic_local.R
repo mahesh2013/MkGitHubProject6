@@ -12,6 +12,8 @@
 # load spark R packages
 library(sparklyr)
 
+Sys.sleep(5)
+
 conf <- spark_config()
 conf$method = 'local'
 
