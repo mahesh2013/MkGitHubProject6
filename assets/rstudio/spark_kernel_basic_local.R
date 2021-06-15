@@ -12,8 +12,11 @@
 # load spark R packages
 library(sparklyr)
 
+conf <- spark_config()
+conf$method = 'local'
+
 # connect to Spark kernel
-sc <- spark_connect(master = 'local', config = spark_config())
+sc <- spark_connect(master = 'local', conig = conf)
 
 # create local R data frame
 library(dplyr)
