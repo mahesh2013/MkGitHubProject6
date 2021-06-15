@@ -8,17 +8,14 @@
 #    - disconnect from Spark kernel
 #
 ############################################################################
+Sys.sleep(1)
 
 # load spark R packages
 library(sparklyr)
 
-Sys.sleep(5)
-
-conf <- spark_config()
-conf$method = 'local'
 
 # connect to Spark kernel
-sc <- spark_connect(master = 'local', conig = conf)
+sc <- spark_connect(master = 'local')
 
 # create local R data frame
 library(dplyr)
